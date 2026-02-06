@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>MADSNAY - PUBG Mobile Rewards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- وصف معاينة عند المشاركة -->
+<meta property="og:title" content="MADSNAY - جوائز PUBG Mobile">
+<meta property="og:description" content="🏆 هذا الموقع موثق من شركة PUBG Mobile ولديه حقوق بيع. شارك واربح الجوائز الآن! اختيار شدات، سيارات، وجوائز قيمة ⏱️ سريع ومرتب، مع واجهة جذابة">
+<meta property="og:image" content="file_00000000876c71f49bbe93e85053d133.png">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('file_00000000301471f4acfdb48a9d91b777.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+header {
+  text-align: center;
+  padding: 20px;
+}
+header img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  z-index: 9999;
+}
+.modal input, .modal select {
+  margin: 5px 0;
+  padding: 8px;
+  width: 80%;
+  border-radius: 6px;
+  border: none;
+}
+#invoiceBtn {
+  margin-top: 20px;
+  background: #00ff00;
+}
+@media (max-width:768px){
+  .container {flex-direction: column; align-items: center;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="file_00000000876c71f49bbe93e85053d133.png" alt="MADSNAY Logo">
+  <h1>PUBG Mobile Rewards</h1>
+</header>
+
+<div class="container">
+
+  <!-- سيارات المجموعة الأولى - اختيار ثلاث -->
+  <div class="card">
+    <img src="images (14).jpeg" alt="سيارة">
+    <p>4400 ج</p>
+    <button onclick="buyCar('images (14).jpeg',4400,'PMGC2026NEGM',3)">اشتري الآن</button>
+  </div>
+  <div class="card">
+    <img src="images (16).jpeg" alt="سيارة">
+    <p>4400 ج</p>
+    <button onclick="buyCar('images (16).jpeg',4400,'PMGC2026NEGM',3)">اشتري الآن</button>
+  </div>
+  <div class="card">
+    <img src="images (18).jpeg" alt="سيارة">
+    <p>4400 ج</p>
+    <button onclick="buyCar('images (18).jpeg',4400,'PMGC2026NEGM',3)">اشتري الآن</button>
+  </div>
+  <div class="card">
+    <img src="images (17).jpeg" alt="سيارة">
+    <p>4400 ج</p>
+    <button onclick="buyCar('images (17).jpeg',4400,'PMGC2026NEGM',3)">اشتري الآن</button>
+  </div>
+
+  <!-- سيارات المجموعة الثانية - اختيار واحدة -->
+  <div class="card">
+    <img src="33c0c80f-e510-448f-bb50-43eb52c94119-500x500-iiYYO0jYdDhjt2Bty73nVFeQUXDoAHtom88JoBDA.jpg" alt="سيارة">
+    <p>8500 ج</p>
+    <button onclick="buyCar('33c0c80f-e510-448f-bb50-43eb52c94119-500x500-iiYYO0jYdDhjt2Bty73nVFeQUXDoAHtom88JoBDA.jpg',8500,'negmprimo200930',1)">اشتري الآن</button>
+  </div>
+  <div class="card">
+    <img src="images (13).jpeg" alt="سيارة">
+    <p>8500 ج</p>
+    <button onclick="buyCar('images (13).jpeg',8500,'negmprimo200930',1)">اشتري الآن</button>
+  </div>
+  <div class="card">
+    <img src="3250deb8-9d28-404f-a307-bb462f0ffbeb-1000x1000-msp4uBnJcba9ACvViv5gT6P7I258mmhoynA7ZQIA.jpg" alt="سيارة">
+    <p>8500 ج</p>
+    <button onclick="buyCar('3250deb8-9d28-404f-a307-bb462f0ffbeb-1000x1000-msp4uBnJcba9ACvViv5gT6P7I258mmhoynA7ZQIA.jpg',8500,'negmprimo200930',1)">اشتري الآن</button>
+  </div>
+  <div class="card">
+    <img src="4faae883-1bad-4dc5-b590-5539b7d6dd61-1000x1000-2fhBQfIBmeHyxQUVLHJD8pP39qr2hW1eeszjrJJI.jpg" alt="سيارة">
+    <p>8500 ج</p>
+    <button onclick="buyCar('4faae883-1bad-4dc5-b590-5539b7d6dd61-1000x1000-2fhBQfIBmeHyxQUVLHJD8pP39qr2hW1eeszjrJJI.jpg',8500,'negmprimo200930',1)">اشتري الآن</button>
+  </div>
+
+</div>
+
+<!-- Modal الدفع -->
+<div class="modal" id="buyModal">
+  <h2>إدخال البيانات</h2>
+  <input type="text" id="gameID" placeholder="ادخل ID اللعبة" required>
+  <select id="method">
+    <option value="cash">الدفع كاش واستلام فورًا</option>
+    <option value="redeem">كود الاسترداد</option>
+  </select>
+  <input type="text" id="phone" placeholder="رقم الهاتف (للدفع الكاش)">
+  <input type="text" id="desc" placeholder="وصف الدفع">
+  <input type="file" id="proof">
+  <button onclick="submitPurchase()">تأكيد</button>
+  <p id="status"></p>
+  <button id="invoiceBtn" onclick="window.print()">طباعة الفاتورة</button>
+</div>
+
+<script>
+let selectedCar = '';
+let selectedPrice = 0;
+let selectedCode = '';
+let maxSelect = 1;
+let chosenCars = [];
+
+function buyCar(img,price,code,max){
+  selectedCar = img;
+  selectedPrice = price;
+  selectedCode = code;
+  maxSelect = max;
+  chosenCars = [];
+  document.getElementById('buyModal').style.display = 'flex';
+}
+
+function submitPurchase(){
+  const id = document.getElementById('gameID').value;
+  const method = document.getElementById('method').value;
+  if(!id){ alert('ادخل ID اللعبة'); return; }
+  if(method==='cash'){
+    const phone = document.getElementById('phone').value;
+    const desc = document.getElementById('desc').value;
+    if(!phone || !desc){ alert('ادخل رقم الهاتف والوصف'); return; }
+  }
+  document.getElementById('status').innerText = 'جارِ مراجعة البيانات...';
+  setTimeout(()=>{
+    document.getElementById('status').innerText = `تم إرسال الطلب. سيتم التأكد من حالة الدفع وسيتم إبلاغك في بريد PUBG. شكراً لتعاملكم معنا. السعر: ${selectedPrice} ج`;
+  },5000);
+}
+</script>
+
+</body>
+</html>
