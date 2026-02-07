@@ -3,275 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MITSBUY ✅ | شدات PUBG وكروت سيارات</title>
 
-<title>MITSBUY ✅ | شراء شدات PUBG وكروت سيارات</title>
-
-<!-- Meta Share -->
-<meta property="og:title" content="MITSBUY ✅">
-<meta property="og:description" content="أقوى موقع لشراء شدات PUBG وكروت السيارات بسرعة وأمان ودفع فودافون كاش أو واتساب">
+<!-- OG لتويتر وفيسبوك + مشاركة -->
+<meta property="og:title" content="MITSBUY ✅ | أقوى موقع لشراء شدات وكروت سيارات">
+<meta property="og:description" content="اشتري شدات PUBG وسيارات بأفضل الأسعار. الدفع فودافون كاش أو واتساب مع مراجعة تلقائية للبيانات.">
 <meta property="og:image" content="unnamed.webp">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://USERNAME.github.io/mitsbuy/">
 
 <style>
 body{
     margin:0;
-    font-family:Cairo,Arial;
-    background:#0e1a24;
+    background:#0b0b0b;
     color:#fff;
-    direction:rtl;
-}
-header{
-    background:#081018;
-    padding:15px;
-    text-align:center;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-}
-header img{
-    height:45px;
-    vertical-align:middle;
-}
-header span{
-    font-size:22px;
-    font-weight:bold;
-    margin-right:10px;
-}
-nav{
-    margin-top:90px;
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
     text-align:center;
 }
-nav button{
-    background:#00c853;
-    border:none;
-    padding:12px 20px;
-    margin:5px;
-    border-radius:8px;
-    color:#000;
-    font-weight:bold;
-    cursor:pointer;
-}
-.section{
-    display:none;
-    padding:25px;
-}
-.section.active{
-    display:block;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-.card{
-    background:#111f2c;
-    padding:15px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 0 15px rgba(0,0,0,.5);
-}
-.card img{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    border-radius:12px;
-}
-.price{
-    color:#00e676;
-    font-size:18px;
-    margin:10px 0;
-}
-input{
+h1{color:#f2b705;margin-top:20px;}
+h2{margin-top:30px;}
+.prices div{
+    background:#1c1c1c;
+    margin:8px auto;
+    padding:12px;
     width:90%;
-    padding:8px;
-    border-radius:6px;
-    border:none;
-    margin-bottom:8px;
-}
-.buy{
-    background:#00c853;
-    border:none;
-    padding:10px 18px;
-    border-radius:8px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* Popup */
-.popup{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.8);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:2000;
-}
-.popup-box{
-    background:#0f202e;
-    padding:25px;
-    border-radius:15px;
-    width:90%;
-    max-width:360px;
-    text-align:center;
-}
-.popup-box button{
-    width:100%;
-    margin:6px 0;
-}
-
-/* Intro Video */
-#intro{
-    position:fixed;
-    inset:0;
-    z-index:3000;
-}
-#intro video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-#skip{
-    position:absolute;
-    bottom:25px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#00c853;
-    padding:10px 25px;
     border-radius:10px;
-    font-weight:bold;
-    cursor:pointer;
+    font-size:16px;
 }
+.cars{display:flex;flex-wrap:wrap;justify-content:center;}
+.cars img{width:150px;margin:10px;border-radius:12px;cursor:pointer;transition:0.3s;}
+.cars img:hover{transform:scale(1.1);border:2px solid #f2b705;}
+select,input,textarea{width:85%;padding:12px;margin:8px;border-radius:8px;border:none;font-size:15px;}
+button{background:#f2b705;color:#000;border:none;padding:14px 30px;margin-top:10px;font-size:16px;border-radius:10px;cursor:pointer;}
+#status{margin-top:15px;color:#ccc;}
+#intro{position:fixed;inset:0;background:#000;z-index:999;}
+#intro video{width:100%;height:100%;object-fit:cover;}
+#intro button{position:absolute;bottom:20px;right:20px;background:rgba(0,0,0,0.6);color:#fff;font-size:13px;}
+.payment-box{
+    background:#1c1c1c;padding:15px;margin:20px auto;border-radius:10px;width:90%;
+}
+.payment-box p{margin:8px 0;}
 </style>
 </head>
-
 <body>
 
-<!-- Intro -->
-<div id="intro" onclick="closeIntro()">
-    <video autoplay muted>
-        <source src="VID_٢٠٢٦٠٢٠٢١٦١٦١٧.mp4" type="video/mp4">
-    </video>
-    <div id="skip">Skip</div>
+<!-- فيديو البداية -->
+<div id="intro">
+  <video autoplay muted>
+    <source src="VID_٢٠٢٦٠٢٠٢١٦١٦١٧.mp4" type="video/mp4">
+  </video>
+  <button onclick="skipIntro()">Skip</button>
 </div>
 
-<header>
-    <img src="unnamed.webp">
-    <span>MITSBUY ✅</span>
-</header>
+<!-- المحتوى -->
+<div id="content" style="display:none">
 
-<nav>
-    <button onclick="show('shd')">شراء شدات</button>
-    <button onclick="show('cars')">سيارات فردية</button>
-    <button onclick="show('special')">سيارات خاصة</button>
-</nav>
+<h1>MITSBUY ✅</h1>
 
-<!-- شدات -->
-<div id="shd" class="section active">
-<h2>شراء شدات PUBG</h2>
-<div class="grid">
-<script>
-const shdats=[
-["360 شدّة",200],["500 شدّة",320],["1000 شدّة",560],
-["2000 شدّة",1220],["5000 شدّة",3400],["10000 شدّة",5600],
-["50000 شدّة",31000],["100000 شدّة",65000],["560000 شدّة",346000]
-];
-shdats.forEach(s=>{
-document.write(`
-<div class="card">
-<img src="images.jpeg">
-<h3>${s[0]}</h3>
-<div class="price">${s[1]} جنيه</div>
-<input placeholder="ID PUBG">
-<button class="buy" onclick="openPay('${s[0]}',${s[1]})">دفع</button>
-</div>
-`);
-});
-</script>
-</div>
+<h2>أسعار الشدات</h2>
+<div class="prices">
+  <div>200 UC — 300 جنيه</div>
+  <div>320 UC — 420 جنيه</div>
+  <div>560 UC — 660 جنيه</div>
+  <div>1220 UC — 1320 جنيه</div>
+  <div>3400 UC — 3500 جنيه</div>
+  <div>5600 UC — 5700 جنيه</div>
+  <div>31000 UC — 31100 جنيه</div>
+  <div>65000 UC — 65100 جنيه</div>
+  <div>346000 UC — 346100 جنيه</div>
 </div>
 
-<!-- سيارات فردية -->
-<div id="cars" class="section">
-<h2>سيارات فردية – 4500 جنيه</h2>
-<div class="grid">
-<script>
-[
-"images (14).jpeg","images (16).jpeg",
-"images (18).jpeg","images (17).jpeg"
-].forEach((img,i)=>{
-document.write(`
-<div class="card">
-<img src="${img}">
-<h3>سيارة ${i+1}</h3>
-<div class="price">4500 جنيه</div>
-<input placeholder="ID اللعبة">
-<button class="buy" onclick="openPay('سيارة فردية',4500)">دفع</button>
-</div>
-`);
-});
-</script>
-</div>
+<h2>السيارات الفردية – 4500 جنيه</h2>
+<div class="cars">
+  <img src="images/images (14).jpeg" alt="سيارة 1">
+  <img src="images/images (16).jpeg" alt="سيارة 2">
+  <img src="images/images (18).jpeg" alt="سيارة 3">
+  <img src="images/images (17).jpeg" alt="سيارة 4">
 </div>
 
-<!-- سيارات خاصة -->
-<div id="special" class="section">
-<h2>سيارات خاصة – 14000 جنيه</h2>
-<div class="grid">
-<script>
-[
-"33c0c80f-e510-448f-bb50-43eb52c94119-500x500-iiYYO0jYdDhjt2Bty73nVFeQUXDoAHtom88JoBDA.jpg",
-"images (13).jpeg",
-"3250deb8-9d28-404f-a307-bb462f0ffbeb-1000x1000-msp4uBnJcba9ACvViv5gT6P7I258mmhoynA7ZQIA.jpg",
-"4faae883-1bad-4dc5-b590-5539b7d6dd61-1000x1000-2fhBQfIBmeHyxQUVLHJD8pP39qr2hW1eeszjrJJI.jpg"
-].forEach((img,i)=>{
-document.write(`
-<div class="card">
-<img src="${img}">
-<h3>سيارة خاصة ${i+1}</h3>
-<div class="price">14000 جنيه</div>
-<input placeholder="ID اللعبة">
-<button class="buy" onclick="openPay('سيارة خاصة',14000)">دفع</button>
-</div>
-`);
-});
-</script>
-</div>
+<h2>السيارات الخاصة – 14000 جنيه</h2>
+<div class="cars">
+  <img src="images/33c0c80f-e510-448f-bb50-43eb52c94119-500x500-iiYYO0jYdDhjt2Bty73nVFeQUXDoAHtom88JoBDA.jpg" alt="سيارة خاصة 1">
+  <img src="images/images (13).jpeg" alt="سيارة خاصة 2">
+  <img src="images/3250deb8-9d28-404f-a307-bb462f0ffbeb-1000x1000-msp4uBnJcba9ACvViv5gT6P7I258mmhoynA7ZQIA.jpg" alt="سيارة خاصة 3">
+  <img src="images/4faae883-1bad-4dc5-b590-5539b7d6dd61-1000x1000-2fhBQfIBmeHyxQUVLHJD8pP39qr2hW1eeszjrJJI.jpg" alt="سيارة خاصة 4">
 </div>
 
-<!-- Popup -->
-<div class="popup" id="popup">
-<div class="popup-box">
-<h3 id="payTitle"></h3>
-<button onclick="vod()">دفع فودافون كاش</button>
-<button onclick="wa()">دفع واتساب</button>
-<div id="vod" style="display:none">
-<p>ادفع على: <b>01206561893</b></p>
-<input type="file">
-<input placeholder="تعليق">
-<p>⏳ جاري مراجعة البيانات...</p>
+<h2>طريقة الدفع</h2>
+<div class="payment-box">
+  <p>اختر طريقة الدفع:</p>
+  <select id="payMethod">
+    <option value="vodafone">فودافون كاش</option>
+    <option value="whatsapp">واتساب</option>
+  </select>
+  <p>أدخل المبلغ:</p>
+  <input type="text" id="amount" placeholder="اكتب السعر">
+  <p>ارفع صورة الدفع أو الإيصال:</p>
+  <input type="file" id="receipt">
+  <p>تعليق (اختياري):</p>
+  <textarea id="comment" placeholder="اكتب تعليقك"></textarea>
+  <button onclick="sendPayment()">إرسال</button>
+  <p id="status"></p>
 </div>
-</div>
+
+<!-- زر مشاركة مباشر -->
+<button onclick="shareLink()">مشاركة الموقع</button>
+
 </div>
 
 <script>
-function show(id){
-document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-document.getElementById(id).classList.add('active');
+function skipIntro(){
+  document.getElementById("intro").style.display="none";
+  document.getElementById("content").style.display="block";
 }
-function openPay(name,price){
-document.getElementById('popup').style.display='flex';
-document.getElementById('payTitle').innerText=`${name} - ${price} جنيه`;
+
+function sendPayment(){
+  const method = document.getElementById("payMethod").value;
+  const amount = document.getElementById("amount").value;
+  const file = document.getElementById("receipt").files[0];
+  const comment = document.getElementById("comment").value;
+
+  if(!amount || !file){
+    alert("من فضلك اكتب السعر وارفع صورة الدفع.");
+    return;
+  }
+
+  document.getElementById("status").innerText =
+  "⏳ جاري مراجعة البيانات، سيتم التأكيد بعد التحقق من المبلغ.";
+
+  if(method === "whatsapp"){
+    const msg = encodeURIComponent(`أريد شراء منتج من MITSBUY\nالسعر: ${amount}\nتعليق: ${comment}`);
+    window.open("https://wa.me/201211056530?text="+msg,"_blank");
+  }
 }
-function vod(){
-document.getElementById('vod').style.display='block';
-}
-function wa(){
-window.open("https://wa.me/201211056530","_blank");
-}
-function closeIntro(){
-document.getElementById('intro').style.display='none';
+
+function shareLink(){
+  if(navigator.share){
+    navigator.share({
+      title: 'MITSBUY ✅ | أقوى موقع لشراء شدات وكروت سيارات',
+      text: 'اشتري شدات PUBG وسيارات بأفضل الأسعار. الدفع فودافون كاش أو واتساب مع مراجعة تلقائية للبيانات.',
+      url: 'https://USERNAME.github.io/mitsbuy/'
+    }).then(()=>console.log('تم المشاركة'))
+    .catch(()=>console.log('فشل المشاركة'));
+  } else {
+    alert('انسخ الرابط للمشاركة: https://USERNAME.github.io/mitsbuy/');
+  }
 }
 </script>
 
